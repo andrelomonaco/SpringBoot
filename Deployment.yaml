@@ -48,7 +48,7 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: status.podIP
-        - name: NODE_IP
+        - name: MY_NODE_IP
           valueFrom:
             fieldRef:
               apiVersion: v1
