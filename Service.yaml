@@ -4,7 +4,7 @@ metadata:
   labels:
     app: frontend
   name: frontend
-  namespace: default
+  namespace: springboot
 spec:
   ports:
   - port: 8080
