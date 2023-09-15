@@ -5,7 +5,7 @@ metadata:
   labels:
     app: frontend
   name: frontend
-  namespace: default
+  namespace: springboot
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
