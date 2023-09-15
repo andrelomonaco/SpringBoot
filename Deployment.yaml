@@ -51,7 +51,8 @@ spec:
         - name: NODE_IP
           valueFrom:
             fieldRef:
-              status.hostIP              
+              apiVersion: v1
+              fieldPath: status.hostIP              
         - name: MY_POD_SERVICE_ACCOUNT
           valueFrom:
             fieldRef:
