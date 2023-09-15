@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   annotations:
   labels:
-    app: springboot
-  name: springboot
+    app: frontend
+  name: frontend
   namespace: default
 spec:
   progressDeadlineSeconds: 600
@@ -12,7 +12,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: springboot
+      app: frontend
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -22,7 +22,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: springboot
+        app: frontend
     spec:
       containers:
       - env:
@@ -53,7 +53,7 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: spec.serviceAccountName
-        image: lomonaco/springboot
+        image: lomonaco/frontend
         imagePullPolicy: Always
         name: springboot
         resources: {}
